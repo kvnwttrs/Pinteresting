@@ -13,5 +13,15 @@ gem 'bootstrap-sass', github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
-  
+
 end
+
+group :development, :test do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg', '~> 0.12.2'
+	gem 'rails_12factor'
+end
+

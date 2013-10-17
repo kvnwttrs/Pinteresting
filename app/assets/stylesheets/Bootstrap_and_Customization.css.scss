@@ -6,8 +6,8 @@ $font-family-sans-serif:							'Lato', 'Helvetica Neue', Helvetica, Arial, sans-
 $navbar-height:												45px;
 $navbar-default-bg:										white;
 $navbar-default-brand-color:					#ADA895;
+$navbar-default-brand-hover-color:		#36342F;
 $navbar-default-link-color:						#ADA895;
-$navbar-default-brand-hover-color:		#36342F; 
 $navbar-default-link-hover-color:			#36342F;
 
 $brand-primary:												#ADA895;  
@@ -24,8 +24,6 @@ $jumbotron-color:											#36342F;
 .navbar-brand {
   font-weight: bold;
 }
-
-
 
 
 @import 'bootstrap';
