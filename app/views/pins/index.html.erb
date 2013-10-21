@@ -19,17 +19,9 @@
             <td><%= pin.description %></td>
             <td><%= pin.string %></td>
             <div class="form-group">
-              <td>
-                <%= link_to 'Show', pin, class: "btn btn-primary btn-xs" %>
-              </td>
-
-              <td>
-                <%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %>
-              </td>
-
-              <td>
-                <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary btn-xs" %>
-              </td>
+              <td><%= link_to 'Show', pin, class: "btn btn-primary btn-xs" %></td>
+              <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %></td>
+              <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary btn-xs" %></td>
             </div>
           </tr>
         <% end %>
