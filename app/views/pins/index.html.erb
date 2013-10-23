@@ -2,10 +2,11 @@
   <div class="panel-body">
     <h2>Listing pins</h2>
 
-    <table>
+    <table class="table table-condensed">
       <thead>
         <tr>
           <th>Description</th>
+          <th>User</th>
           <th>String</th>
           <th></th>
           <th></th>
@@ -17,11 +18,14 @@
         <% @pins.each do |pin| %>
           <tr>
             <td><%= pin.description %></td>
+            <td><%= pin.user.email if pin.user %></td>
             <td><%= pin.string %></td>
-            <div class="form-group">
+            <div class="btn-group">
               <td><%= link_to 'Show', pin, class: "btn btn-primary btn-xs" %></td>
-              <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %></td>
-              <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary btn-xs" %></td>
+              <% if pin.user == current_user %>
+                <td><%= link_to 'Edit', edit_pin_path(pin), class: "btn btn-primary btn-xs" %></td>
+                <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?'}, class: "btn btn-primary btn-xs" %></td>
+              <% end %>
             </div>
           </tr>
         <% end %>
