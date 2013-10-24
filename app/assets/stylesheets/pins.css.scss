@@ -17,3 +17,19 @@
 }
 
 a:link {text-decoration:none;}
+
+.masonry,
+
+.masonry .masonry-brick {
+
+-webkit-transition-duration: 0.7s;
+
+-moz-transition-duration: 0.7s;
+
+-ms-transition-duration: 0.7s;
+
+-o-transition-duration: 0.7s;
+
+transition-duration: 0.7s;
+
+}
