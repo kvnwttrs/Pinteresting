@@ -1,4 +1,0 @@
-# Supposedly needed for the AWS_BUCKET environment
-AWS_ACCESS_KEY_ID: "whatever_the_key_is"
-AWS_SECRET_ACCESS_KEY: "whatever_the_secret_is"
-AWS_BUCKET: "ndeavor-dev"
