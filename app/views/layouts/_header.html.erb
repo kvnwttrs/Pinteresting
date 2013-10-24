@@ -10,6 +10,13 @@
     </button>
     <%= link_to "Pinteresting", root_path, class: "navbar-brand" %>
   </div>
+    
+  <ul class="nav navbar-nav navbar-left">
+    <% if user_signed_in? %>
+    <li><%= link_to "New Pin", new_pin_path %></li>
+    <% end %>
+  </ul>
+    
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav navbar-right">
