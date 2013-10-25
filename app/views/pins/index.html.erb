@@ -4,7 +4,7 @@
       <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
         <h4><%= pin.description %></h4>
-        <p><small><%= pin.user.email if pin.user %></small></p>
+        <p><small><%= pin.user.name if pin.user %></small></p>
         <p><%= pin.string %></p>
         <% if pin.user == current_user %>
         <div class="actions">
@@ -24,3 +24,7 @@
 <div class="center">
   <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>
+
+<% if @pins.all == 0 %>
+<%= render 'form' %>
+<% end %>
